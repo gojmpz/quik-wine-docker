@@ -12,7 +12,7 @@ RUN apt update \
     && locale-gen \
     && update-locale LANG=en_US.UTF-8
 
-RUN apt install -y --no-install-recommends curl gnupg winbind xvfb xauth x11vnc fluxbox procps cabextract xautomation xdotool ca-certificates zenity
+RUN apt install -y --no-install-recommends curl gnupg winbind xvfb xauth x11vnc fluxbox procps cabextract xautomation xdotool ca-certificates
 
 RUN echo "deb http://dl.winehq.org/wine-builds/debian/ buster main" >> /etc/apt/sources.list \
     && curl -fsSL  https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
