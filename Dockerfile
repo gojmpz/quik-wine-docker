@@ -17,7 +17,7 @@ RUN apt install -y --no-install-recommends curl gnupg winbind xvfb xauth x11vnc 
 RUN echo "deb http://dl.winehq.org/wine-builds/debian/ buster main" >> /etc/apt/sources.list \
     && curl -fsSL  https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
     && apt update \
-    && apt install -y --no-install-recommends winehq-staging=6.23~buster-1
+    && apt install -y --no-install-recommends winehq-stable
 
 RUN apt clean -y && apt autoremove -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 COPY start.sh /root
